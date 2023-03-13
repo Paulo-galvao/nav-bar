@@ -1,0 +1,116 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body
+{
+    background: #343434;
+}
+
+/*
+____desktop____
+*/
+
+header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid #1B1212;
+}
+
+
+
+.logo
+{
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #1F51FF;
+}
+
+.nav-link
+{
+    padding: 0 10px;
+    text-decoration: none;
+    color: #7393B3;
+    font-weight: 600;
+    transition: color .7s;
+}
+
+.icons-link
+{
+    font-size: 1.2em;
+    color: #7393B3;
+    text-decoration: none;
+    transition: color .7s;
+}
+
+.nav-mob
+{
+    cursor: pointer;
+    font-size: 2.5em;
+    color: #7393B3;
+    transition: color .7s;
+    display: none;
+}
+
+.nav-link:hover, 
+.icons-link:hover,
+.nav-mob:hover
+{
+    color: #0096FF;
+}
+
+
+
+/*
+_____mobile_____
+*/
+
+@media (max-width:620px) {
+    header
+    {
+        justify-content: space-between;
+        
+    }
+    .icons
+    {
+        display: none;
+    }
+    .nav-bar
+    {
+        overflow: hidden;
+        height: 0;
+        transition: all .5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background: #28282B;
+    }
+    .nav-column{
+        overflow: visible;
+        height: 182px;
+    }
+    
+    .nav-link
+    {   
+        display: block;
+        padding: 10px 0;
+        transition: all .5s ease-out;
+    }
+    .nav-link:hover
+    {
+        transform: translate(5px);
+        background: #36454F;
+    }
+    .nav-mob
+    {
+        display: inline;
+    }
+}
